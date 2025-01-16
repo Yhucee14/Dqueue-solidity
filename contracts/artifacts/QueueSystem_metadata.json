@@ -1,0 +1,262 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "queueNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "JoinedQueue",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPosition",
+						"type": "uint256"
+					}
+				],
+				"name": "UpgradedToVIP",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getFullQueue",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getQueueNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getQueueSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "joinQueue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "queue",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeToVIP",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "queueNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isVIP",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPaymentTime",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vipCost",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getQueueNumber(address)": {
+					"params": {
+						"user": "The address of the user"
+					},
+					"returns": {
+						"_0": "The queue number of the user"
+					}
+				},
+				"getQueueSize()": {
+					"returns": {
+						"_0": "The total number of users in the queue"
+					}
+				}
+			},
+			"title": "Queue Management with VIP Upgrade",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Constructor to initialize the owner"
+				},
+				"getFullQueue()": {
+					"notice": "Function to get the entire queue (for debugging or admin purposes)"
+				},
+				"getQueueNumber(address)": {
+					"notice": "Get the user's current queue number"
+				},
+				"getQueueSize()": {
+					"notice": "Get the queue size"
+				},
+				"joinQueue()": {
+					"notice": "Function to join the queue"
+				},
+				"upgradeToVIP()": {
+					"notice": "Function to upgrade the user to VIP"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/QueueSystem.sol": "QueueSystem"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/QueueSystem.sol": {
+			"keccak256": "0x4b1cccebcb6d7d257ace8c68c1d99d345e78e4ace13ba7694f28fea816cb784e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d5c539f7a2f4ea1c477656ad0229fb7a6beeb1d2d5b47c1982f0a5b677734f14",
+				"dweb:/ipfs/QmWksX7usn7SCxCjSDLx8iab2hY7JGys7M928pZzKbN47c"
+			]
+		}
+	},
+	"version": 1
+}
