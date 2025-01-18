@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.24+commit.e11b9ed9"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -192,9 +192,6 @@
 			"kind": "dev",
 			"methods": {
 				"getQueueNumber(address)": {
-					"params": {
-						"user": "The address of the user"
-					},
 					"returns": {
 						"_0": "The queue number of the user"
 					}
@@ -205,7 +202,6 @@
 					}
 				}
 			},
-			"title": "Queue Management with VIP Upgrade",
 			"version": 1
 		},
 		"userdoc": {
@@ -237,7 +233,7 @@
 		"compilationTarget": {
 			"contracts/QueueSystem.sol": "QueueSystem"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -250,11 +246,11 @@
 	},
 	"sources": {
 		"contracts/QueueSystem.sol": {
-			"keccak256": "0x4b1cccebcb6d7d257ace8c68c1d99d345e78e4ace13ba7694f28fea816cb784e",
+			"keccak256": "0xf610ef543ece38052284a7cc017bcd543bce62a2c292be6f0a0fd87c91573148",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d5c539f7a2f4ea1c477656ad0229fb7a6beeb1d2d5b47c1982f0a5b677734f14",
-				"dweb:/ipfs/QmWksX7usn7SCxCjSDLx8iab2hY7JGys7M928pZzKbN47c"
+				"bzz-raw://39621d08d2b01b33634d0f30db5b43bf71de7f69f04ef100cee2a70bd0a43cdf",
+				"dweb:/ipfs/QmQrLp6GqJH1xNQGC3J2yprbEA7Lff8pX9j6gUhTZk8SV2"
 			]
 		}
 	},

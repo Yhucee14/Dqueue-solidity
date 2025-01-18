@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.24;
+pragma solidity 0.8.26;
 
-/// @title Queue Management with VIP Upgrade
 
 contract QueueSystem {
     // Struct to hold user information
@@ -109,7 +108,6 @@ contract QueueSystem {
 
 
     /// @notice Get the user's current queue number
-    /// @param user The address of the user
     /// @return The queue number of the user
     function getQueueNumber(address user) external view returns (uint256) {
         return users[user].queueNumber;
